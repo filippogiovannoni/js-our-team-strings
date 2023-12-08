@@ -27,7 +27,8 @@ for (let i = 0; i < memberList.length; i++) {
     // Al click della card viene aggiunta la classe per evidenziare la card
     cardElement.addEventListener('click', function(){
 
-        cardElement.classList.add('bg-danger', 'text-decoration-underline')
+        cardElement.classList.toggle('bg-danger')
+        cardElement.classList.toggle('text-decoration-underline')
 
     })
 
