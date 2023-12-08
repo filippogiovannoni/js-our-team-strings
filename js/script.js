@@ -12,7 +12,7 @@ for (let i = 0; i < memberList.length; i++) {
     // Creo un elemento nella DOM e lo salvo in una variabile
     const cardElement = document.createElement('div')
     //All'elemento aggiungo le classi alla card
-    cardElement.classList.add('card', 'px-3', 'py-5', 'm-3', 'bg-primary')
+    cardElement.classList.add('card', 'px-3', 'py-5', 'm-3', 'bg-primary', 'text-white')
     
     //Seleziono il container nella DOM e lo salvo in una variabile
     const containerElement = document.querySelector('.container')
@@ -24,7 +24,16 @@ for (let i = 0; i < memberList.length; i++) {
     const memberName = memberList[i];
     cardElement.innerText = memberName
 
+    // Al click della card viene aggiunta la classe per evidenziare la card
+    cardElement.addEventListener('click', function(){
+
+        cardElement.classList.add('bg-danger', 'text-decoration-underline')
+
+    })
+
     
 }
+
+
 
 
